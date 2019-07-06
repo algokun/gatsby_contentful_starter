@@ -1,52 +1,31 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React from 'react'
+import Sidebar from './Sidebar'
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
-import "./layout.css"
-
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+function Layout({ children }) {
+    const data = {
+        'title': "Hi , I’m Mohan",
+        'info': "Kick off your next gatsby contentful project with this awesome starter 🚀. I hope you like this one. I love to hear your feedback.",
+        'social': {
+            "facebook": "https://www.facebook.com/sree.dhannu",
+            "twitter": "https://www.twitter.com/_MrNullPointer",
+            "github": "https://github.com/mohanmonu777"
         }
-      }
     }
-  `)
-
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+    return (
+        <div className="container">
+            <div className="row">
+                <div className="col">
+                    <Sidebar data={data} />
+                    <div className = "vertical-line"></div>
+                </div>
+                <div className = "col-lg-8">
+                    <div className = "articles my-5">
+                        {children}
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default Layout
