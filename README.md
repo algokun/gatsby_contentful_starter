@@ -7,7 +7,7 @@
   A clean , minimal, and responsive starter for creating blogs uses <a href="https://github.com/gatsbyjs/gatsby" target="_blank">Gatsby</a>.
 </h4>
 
-## Quick Start 🚀
+🚀## Quick Start 
 
 #### Create a Gatsby site
 
@@ -85,4 +85,9 @@ query getContentBySlug($slug : String){
 
 After clicking that button, you’ll authenticate with GitHub and choose a repository name. Netlify will then automatically create a repository in your GitHub account with a copy of the files from the template. Next, it will build and deploy the new site on Netlify, bringing you to the site dashboard when the build is complete. Next, you’ll need to set up Netlify’s Identity service to authorize users to log in to the CMS.
 
+## Stay in touch
 
+I love to hear feedback.
+
+<a href = "http://facebook.com/sree.dhannu" ><img src="https://img.icons8.com/color/48/000000/facebook-new.png"> </a>
+<a href = "https://twitter.com/_MrNullPointer" ><img src="https://img.icons8.com/color/48/000000/twitter.png"> </a>
