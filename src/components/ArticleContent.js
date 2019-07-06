@@ -1,18 +1,20 @@
 import React from 'react';
 import TagList from './TagList';
+import { Helmet } from 'react-helmet'
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import { Link } from 'gatsby';
 
 function ArticleContent(props) {
-    
+
     //articleData
     const documentJson = props.data.contentfulArticle.content.json.content
     const title = props.pageContext.title
     const tags = props.pageContext.tags
     const timeStamp = props.pageContext.timeStamp
-    
+
+
     //Creates a rich text document
     const richTextDocument = {
         nodeType: 'document',
@@ -21,7 +23,7 @@ function ArticleContent(props) {
             ...documentJson //adds the content to the document
         ]
     };
-    
+
     //For Rendering Embedded Assets in Contentful
     const Image = ({ node }) => {
         const src = node.data.target.fields.file["en-US"].url
@@ -93,8 +95,11 @@ function ArticleContent(props) {
             <Link
                 className="btn btn-outline-light rounded-pill mx-5 my-3"
                 to="/">
-                    Back to Home
+                Back to Home
             </Link>
+            <Helmet>
+                <title>{title}</title>
+            </Helmet>
             <div className="article-content">
                 <span className="display-4">{title}</span>
                 <div className="mt-5">
@@ -102,13 +107,13 @@ function ArticleContent(props) {
                         documentToReactComponents(richTextDocument, options)
                     }
                 </div>
-                <hr className = "bg-light"/>
+                <hr className="bg-light" />
                 <div>
-                    <span className = "font-italic h5">Published {getTimestamp(timeStamp)}</span>
-                    <br/>
-                    <br/>
+                    <span className="font-italic h5">Published {getTimestamp(timeStamp)}</span>
+                    <br />
+                    <br />
                     Tagged with
-                    <TagList data = {tags}/>
+                    <TagList data={tags} />
                     Note : These are the random articles took from Medium
                 </div>
             </div>
