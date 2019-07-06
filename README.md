@@ -1,6 +1,4 @@
 <h1 align="center">
-    <img alt="Contentful" title="Contentful" src="https://www.gatsbyjs.org/monogram.svg" width="140">
-    <img src="https://img.icons8.com/color/48/DA5454/filled-like.png">
-    <img alt="Contentful" title="Contentful" src="https://avatars1.githubusercontent.com/u/472182?s=280&v=4" width="140"> </br>
+    <img alt="Contentful" title="Contentful" src = "https://user-images.githubusercontent.com/21126965/60759275-1314eb80-a040-11e9-8e75-ee8e1d75169a.png"> </br>
     Gatsby Contentful Starter
 </h1>
