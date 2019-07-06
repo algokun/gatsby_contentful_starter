@@ -65,7 +65,7 @@ Retrieves all the articles
     }
 ```
 
-To get single Article , based on a field 
+To get single Article , based on a single field. In our case its `slug`
 
 ```
 query getContentBySlug($slug : String){
