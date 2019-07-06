@@ -7,7 +7,7 @@
   A clean , minimal, and responsive starter for creating blogs uses <a href="https://github.com/gatsbyjs/gatsby" target="_blank">Gatsby</a>.
 </h4>
 
-🚀## Quick Start 
+## 🚀 Quick Start 
 
 #### Create a Gatsby site
 
