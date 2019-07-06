@@ -7,7 +7,6 @@
   A clean , minimal, and responsive starter for creating blogs uses <a href="https://github.com/gatsbyjs/gatsby" target="_blank">Gatsby</a>.
 </h4>
 
-
 ## Quick Start 🚀
 
 #### Create a Gatsby site
@@ -43,6 +42,37 @@ It contains the following fields
 + description : Holds the description of Article
 + slug : A 'slug' is the part that comes at the very end of a URL, and refers to a specific page.
 + content: The Rich Text Document that holds the overall content of the Article
-+ tags
++ tags : Ah boy! you know what it is! 😁
 
 #### Query
+
+we use `graphql` to query data, you can find more about graphql [here](https://graphql.org/learn).
+
+Retrieves all the articles
+
+```
+{
+        allContentfulArticle{
+          edges{
+            node{
+              title
+              slug
+              createdAt
+              tags
+            }
+          }
+        }
+      }
+```
+
+To get single Article , based on a field 
+
+```
+query getContentBySlug($slug : String){
+	contentfulArticle(slug : {eq : $slug}){
+    content{
+      json
+    }
+  }
+}
+```
