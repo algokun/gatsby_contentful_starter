@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet'
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
-import { Link } from 'gatsby';
+import { Link , graphql} from 'gatsby';
 
 function ArticleContent(props) {
 

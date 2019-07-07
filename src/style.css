@@ -95,4 +95,7 @@ body p {
         margin: 0px;
         color: #80CBC4
     }
+    .article-content{
+        margin: 10px
+    }
 }
